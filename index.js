@@ -147,16 +147,21 @@ Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURICom
 Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
                     XeonBotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
-🐶✑ Hi👋 @${num.split("@")[0]},
-🐶✑ Welcome To ${metadata.subject}
+اهــــــلا بيك   @${num.split("@")[0]}, 
 
-🐶✑ Description: ${metadata.desc}
+فــي جروبـنـا المتواضــع 🏃‍♂️♥️
+                     
+  ❖ - - - - - - - - ⇠ ${metadata.subject} ⇢- - - - - - - ❖
+الوصــــف ⇠
 
-🐶✑ Welcome To Our Comfortable Happy😋, Sometimes Loud😜, Usually Messy🤥, Full Of Love🥰, HOME😌!!`} )
+${metadata.desc}
+
+منــور تانــي اقراء القوانيــن واللتزم بيها لانهــا اهم منك 👨‍🦳♥️..`} )
                 } else if (anu.action == 'remove') {
-                    XeonBotInc.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `🐶✑ @${num.split("@")[0]} Left ${metadata.subject}
+                    XeonBotInc.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, الــــورع: `🤺✑ @${num.split("@")[0]} غــــادر نقابــة ${metadata.subject}
 
-🐶✑ I'm Not Sure If It Was A Goodbye Charm, But It Was Fun While It Lasted 😌✨` })
+⇠ الوداع يا صديقــي كانت اسطــورة موجودة اتمنــي نلتقي في مكــان احســن ♥️.
+⇠امــا لــو كنــت كلــب توكل بس توكل ربنــا يهديــك ‚😒💙💦!..` })
                 }
             }
         } catch (err) {
