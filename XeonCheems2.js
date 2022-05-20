@@ -1168,31 +1168,38 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
             case '/هل':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
+				if (!text) return replay(`للاستخدام اكتب : ${prefix + command} اي نص `)
 					const apa = [`نعم`, `لا`, `يمكن`, `اتفق`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-XeonBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
+XeonBotInc.sendMessage(from, { text: `Question :  ${q}\nAnswer : ${kah}` }, { quoted: m })
 
 					break
-					            case '/ماذا':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
+					
+case '/اسئلة':
+					const jki = [`ما هي أكثر المواقف المحرجة التي تعرضت إليها؟`, `إذا تحدث حيوانك الأليف فماذا تتوقع أن يقول عنك؟`, `إذا اتيحت لك الفرصة إذا تحدث حيوانك الأليف فماذا تتوقع أن يقول عنك؟رتداء زي تنكري فماذا سوف يكون؟`, `أخبرنا عن ثإذا تحدث حيوانك الأليف فماذا تتوقع أن يقول عنك؟ث أشياء مضحكة كنت تفهمها بشكل خاطئ لمدة طويلة.`,`عثرت على مصبح علاء الدين وكانت أمامك الفرصة لتحقيق أمنية مجنونة أو خيالية فماذا سوف تكون؟`,`ما هو أطرف اسم مستعار أطلق عليك؟`,`هل شعرت يوما بالخيانة؟`,`أيهما أتى أولاً ، البيضة أم الدجاجة؟`,`ما هو الفيلم الكوميدي المفضل لك؟ هل يمكنك أن تخبرنا بمشهدك المفضل؟`,`ما هو أقذر فكرة مررت بها على الإطلاق؟`,`ما هو أكبر خيالك؟`,`ما هو أسوأ خوف لديك؟`,`ما هو أكثر شيء يرضيك؟`,`الى ماذا تنظر أولا في الفتاة؟`,`هل سبق لك الانفصال عن صديق ما على الرغم من أنك تحبه؟`,`هل تحب رؤية القمر، نعم أم لا؟`,`هل لديك شخص تعتبره توأم روحك، نعم أم لا؟`,`من هو الشخص الذي تخاف منه ؟`,`إذا أتيحت لك الفرصة لقتل شخص ما، فهل ستفعل؟ إذا كانت إجابتك نعم، فمن هو هذا الشخص؟`,`ما العادة التي ترغب بتغييرها في نفسك؟`,`هل قمت بالتبول في البحر من قبل؟`,`ما هو أكثر أمر رومانسي قمت بها على الإطلاق؟`,`ما هي الأكلة التي من الممكن أن تنهي طبقًا كبيرًا منها في جلسة واحدة؟`,`هل توجد شخصية مشهورة سواء ممثل أو لاعب أو فنان ترغب في في تبادل الحياة معه لمدة أسبوع؟`,`إذا كنت من الجنس الآخر لمدة يوم كامل ما هي الأشياء التي ستقم بها؟`,`إذا كنت غير مرئي لمدة 24 ساعة إلى أين ستذهب وماذا ستفعل؟`,`ما هو أكبر عيب في شخصيتك؟`,`من هو أول شخص أعجبت به؟`,`ما هي أكثر لحظة محرجة مرت عليك في حياتك؟`,`ما هي أكبر خرافة كنت تؤمن بها؟`,`ما هو أغرب سبب لانفصالك عن شخص ارتبطت به من قبل؟`,`هل شعرت يوماً أنك وحيد وتحتاج للصحبة أو الحب؟`,`هل تستطيع وصف نفسك في جملة واحدة؟`,`إذا كان لديك ثلاثة أمنيات تتحقق فوراً ماذا ستختارين؟`,`هل سبق وشعرتي بالندم للارتباط بشريكك الحالي؟`,`هل كذبت على احد أصدقاءك من قبل، من هو وما هي الكذبة؟`,`ما هي الجملة أو الكلمة التي جرحت مشاعرك من شخص عزيز عليك؟`,`من تختارين حبيبك أم صديقتك؟`,`ما هو أسوأ كابوس في حياتك ولا تتمني أن يتحقق؟`,`صفة في شركيك تتمنين أن تغيريها؟`,`هل تتميز بكونك شخص متسامح أم لا؟`,`هل لديك الشجاعة أن تتدخل عندما ترى حادثًا أمامك ؟`,`هل تتذكر موقف أبكاك أمام الناس دون أن تشعر ؟`,`ما شعورك في حالة معرفتك بحب صديقك لأختك ؟` ]
+					const kio = jki[Math.floor(Math.random() *jki.length)]
+					XeonBotInc.sendMessage(from, { text: `السؤال: ${kio}` }, { quoted: m })
+break
+				
+            case '/ماذا':
+				if (!text) return replay(`للاستخدام اكتب : ${prefix + command} أي نص`)
 					const lel = [`اسال حبيبتك`, `لا اعلم `, `لا اعلم اسال المنشن السادس`]
 					const kahk = lel[Math.floor(Math.random() * lel.length)]
-XeonBotInc.sendMessage(from, { text: `السؤال  : What ${q}\nالاجابة : ${kahk}` }, { quoted: m })
+XeonBotInc.sendMessage(from, { text: `السؤال  : ${q}\nالاجابة : ${kahk}` }, { quoted: m })
 
 					break
 case '/يقدر':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
+				if (!text) return replay(`للاستخدام اكتب : ${prefix + command} أي نص `)
 					const bisa = [` همم يقدر`,`  لا يعم مستحيييل `,`  يمكن `,` اكيييييييد `]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
-XeonBotInc.sendMessage(from, { text: ` السؤال: Can ${q}\nالاجابة : ${ga}` }, { quoted: m })
+XeonBotInc.sendMessage(from, { text: ` السؤال: ${q}\nالاجابة : ${ga}` }, { quoted: m })
 
 					break
 case '/ازاي':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} is my face`)
-					const gimana = [`بالحظ`, `هكر هكر`, `لا اعلم جرب مره اخري 😂😂`, `اسال عمو جوجل`,`ماهذا بحقك الجحيم???`,`اوحا`,`:(`,`يهيهيههي:(`,`اخبارك`]
+				if (!text) return replay(`للاستخدام اكتب  : ${prefix + command} أي نص هنا `)
+					const gimana = [`بالحظ`, `هكر هكر`, `لا اعلم جرب مره اخري 😂😂`, `اسال عمو جوجل`,`ماهذا بحقك الجحيم???`,`اوحا`,`:(`,`يهيهيههي`,`اخبارك`,`زي مانا عمك`,`استرجل بس`,`عاوز كورس`]
 					const ya = gimana[Math.floor(Math.random() * gimana.length)]
-XeonBotInc.sendMessage(from, { text: `السؤال : ${q}\nالاجابة : How ${ya}` }, { quoted: m })
+XeonBotInc.sendMessage(from, { text: `السؤال : ${q}\nالاجابة :  ${ya}` }, { quoted: m })
 
 					break
 case '/تقيم':
@@ -1203,7 +1210,7 @@ XeonBotInc.sendMessage(from, { text: `منشن : ${q}\nالتقيم : *${te}%*` 
 
 					break
   case '/يكرهني':
-				if (!text) return replay(`للاستخدام منشن اي شخص مثل  : ${prefix + command} @Muzan`)
+				if (!text) return replay(`للاستخدام منشن اي شخص مثل   : ${prefix + command} @Muzan`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
@@ -1216,6 +1223,14 @@ case '/غباء':
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
 
 					break
+case '/نسبة': case '/نسبه' :
+				if (!text) return replay(`منشن اي شخص مثل و اسال سؤال  : ${prefix + command} حب موزان لنفسو 🤣@Muzan`)
+					const ki = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const sama = ki[Math.floor(Math.random() *ki.length)]
+XeonBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${sama}%*` }, { quoted: m })
+
+					break
+
 case '/وسيم':
   case '/كريزما':
     case '/ناعم':
@@ -1906,7 +1921,7 @@ break
         }
         break
             case 'emojimix': {
-	        if (!text) return replay(`Example : ${prefix + command} 😅+🤔`)
+	        if (!text) return replay(`Example : ${prefix + command} 😅+??`)
 		let [emoji1, emoji2] = text.split`+`
 		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 		for (let res of anu.results) {
@@ -2462,7 +2477,7 @@ case 'webtonsearch': case 'webtoon':
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
-                XeonBotInc.sendText(m.chat, `🤺 *Analysis :* ${anu.message.analisa}\n🤺 *Root Number :* ${anu.message.angka_akar}\n🤺 *Nature :* ${anu.message.sifat}\n🤺 *Element :* ${anu.message.elemen}\n🤺 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
+                XeonBotInc.sendText(m.chat, `🤺 *Analysis :* ${anu.message.analisa}\n🤺 *Root Number :* ${anu.message.angka_akar}\n🤺 *Nature :* ${anu.message.sifat}\n?? *Element :* ${anu.message.elemen}\n🤺 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
             }
             break
             case 'potensipenyakit': case 'penyakit': {
@@ -3122,7 +3137,7 @@ View List Of Messages With ${prefix}listmsg`)
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
                     let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
+                        { buttonId: 'start', buttonText: { displayText: '??Start🚶' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
                     reply(false)
@@ -3134,7 +3149,7 @@ View List Of Messages With ${prefix}listmsg`)
                 if (room) {
                     let buttons = [
                         { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: '??Stop🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
@@ -3663,6 +3678,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 *❏  لعوب*
 *❏ كيوت*
 *❏  /تطقيم*
+*❏*  /نسبة
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "","url": `${myweb}`}},{"urlButton": {"displayText": "","url": `${sc}`}},{"quickReplyButton": {"displayText": "","id": 'donate'}},{"quickReplyButton": {"displayText": "𝐌𝐮𝐳𝐚𝐧 𝐋𝐨𝐯𝐞 𝐲𝐨𝐮","id": 'owner'}}] )
 break
 
@@ -3936,7 +3952,7 @@ Thanks to
 𝐀𝐧𝐝 𝐚𝐥𝐥 𝐦𝐲 𝐩𝐞𝐨𝐩𝐥𝐞`,unicorn, [{"urlButton": {"displayText": "","url": `${myweb}`}},{"urlButton": {"displayText": "","url": `${sc}`}},{"quickReplyButton": {"displayText": "","id": 'donate'}},{"quickReplyButton": {"displayText": "𝐌𝐮𝐳𝐚𝐧 𝐋𝐨𝐯𝐞 𝐲𝐨𝐮","id": 'owner'}}] )
 break
 case 'grouplink1':
-replay (` https://chat.whatsapp.com/Bh8e7njsPTC831AGiylfMa ` )
+replay (`  ` )
 break 
 case 'الاستمارة':
 case 'استماره':
@@ -3970,7 +3986,7 @@ break
 case ('المطور'):
 replay (`𝑚𝑦 𝑛𝑎𝑚𝑒 : 𝐾𝑖 𝑠𝑎𝑚𝑎 / 𝑚𝑢𝑧𝑎
 𝑚𝑦 𝑛𝑢𝑚𝑏𝑒𝑟 : http://Wa.me/201032199513
-𝑚𝑦 𝑔𝑟𝑜𝑢𝑝 : https://chat.whatsapp.com/Bh8e7njsPTC831AGiylfMa 
+𝑚𝑦 𝑔𝑟𝑜𝑢𝑝 :  
 𝑛𝑎𝑚𝑒 𝐵𝑜𝑡 : ${botname} 
 𝐼 𝐿𝑜𝑣𝑒 ${pushname} 
 𝑔𝑜𝑜𝑑 𝑑𝑎𝑦 `)
