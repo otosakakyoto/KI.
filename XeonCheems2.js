@@ -1447,11 +1447,11 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `╚»˙·٠•●♥منشن جماعي♥●•٠·˙«╝ 
  
  ➲ *Message : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
-                teks += `🐶 @${mem.id.split('@')[0]}\n`
+                teks += `🤍 @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -1471,7 +1471,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
                 let anu = await styletext(text)
                 let teks = `Entered Text ${text}\n\n`
                 for (let i of anu) {
-                    teks += `🐶 *${i.name}* : ${i.result}\n\n`
+                    teks += `🤍 *${i.name}* : ${i.result}\n\n`
                 }
                 reply(teks)
 	    }
@@ -1820,8 +1820,8 @@ break
                     let read = i.readTimestamp
                     let unread = i.receiptTimestamp
                     let waktu = read ? read : unread
-                    teks += `🐶 @${i.userJid.split('@')[0]}\n`
-                    teks += ` ┗━🐶 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🐶 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+                    teks += ` @${i.userJid.split('@')[0]}\n`
+                    teks += ` ┗━ *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')}  *Status :* ${read ? 'Read' : 'Sent'}\n\n`
                 }
                 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
             }
@@ -2029,7 +2029,7 @@ break
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
-                    teks += `🐶 No : ${no++}\n🐶 Type : ${i.type}\n🐶 Video ID : ${i.videoId}\n🐶 Title : ${i.title}\n🐶 Views : ${i.views}\n🐶 Duration : ${i.timestamp}\n🐶 Uploaded On : ${i.ago}\n🐶 Author : ${i.author.name}\n🐶 Url : ${i.url}\n\n─────────────────\n\n`
+                    teks += ` No : ${no++}\n Type : ${i.type}\n Video ID : ${i.videoId}\n Title : ${i.title}\n Views : ${i.views}\n Duration : ${i.timestamp}\n Uploaded On : ${i.ago}\n Author : ${i.author.name}\n Url : ${i.url}\n\n─────────────────\n\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
@@ -2040,9 +2040,9 @@ break
                 google({'query': text}).then(res => {
                 let teks = `Google Search Title : ${text}\n\n`
                 for (let g of res) {
-                teks += `🐶 *Title* : ${g.title}\n`
-                teks += `🐶 *Description* : ${g.snippet}\n`
-                teks += `🐶 *Link* : ${g.link}\n\n────────────────────────\n\n`
+                teks += ` *Title* : ${g.title}\n`
+                teks += ` *Description* : ${g.snippet}\n`
+                teks += ` *Link* : ${g.link}\n\n────────────────────────\n\n`
                 } 
                 reply(teks)
                 })
@@ -2082,16 +2082,16 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🐶 Title : ${anu.title}
-🐶 Ext : Search
-🐶 ID : ${anu.videoId}
-🐶 Duration : ${anu.timestamp}
-🐶 Viewes : ${anu.views}
-🐶 Uploaded On : ${anu.ago}
-🐶 Author : ${anu.author.name}
-🐶 Channel : ${anu.author.url}
-🐶 Description : ${anu.description}
-🐶 Url : ${anu.url}`,
+ Title : ${anu.title}
+ Ext : Search
+ ID : ${anu.videoId}
+ Duration : ${anu.timestamp}
+ Viewes : ${anu.views}
+ Uploaded On : ${anu.ago}
+ Author : ${anu.author.name}
+ Channel : ${anu.author.url}
+ Description : ${anu.description}
+ Url : ${anu.url}`,
                     footer: XeonBotInc.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2312,7 +2312,7 @@ case 'webtonsearch': case 'webtoon':
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
-                    caption: `🐶 Title : ${result.title}\n🐶 Source : ${result.source}\n🐶 Media Url : ${result.image}`,
+                    caption: ` Title : ${result.title}\n Source : ${result.source}\n Media Url : ${result.image}`,
                     footer: XeonBotInc.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2367,7 +2367,7 @@ case 'webtonsearch': case 'webtoon':
                 if (!text) return reply(`Example : ${prefix + command} belanja`)
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return reply(anu.message)
-                XeonBotInc.sendText(m.chat, `🐶 *Dream :* ${anu.message.mimpi}\n🐶 *Meaning :* ${anu.message.arti}\n🐶 *Solution :* ${anu.message.solusi}`, m)
+                XeonBotInc.sendText(m.chat, ` *Dream :* ${anu.message.mimpi}\n *Meaning :* ${anu.message.arti}\n *Solution :* ${anu.message.solusi}`, m)
             }
             break
             case 'ramalanjodoh': case 'ramaljodoh': {
@@ -2658,13 +2658,13 @@ case 'webtonsearch': case 'webtoon':
                     if (!id) return reply(`No Query username, Example : ${prefix + command} ig josephxeon13`)
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
                     if (anu.status == false) return reply(anu.result.message)
-                    XeonBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', `🐶 Full Name : ${anu.caption.full_name}\n🐶 User Name : ${anu.caption.user_name}\n🐶 ID ${anu.caption.user_id}\n🐶 Following : ${anu.caption.followers}\n🐶 Followers : ${anu.caption.following}\n🐶 Bussines : ${anu.caption.bussines}\n🐶 Professional : ${anu.caption.profesional}\n🐶 Verified : ${anu.caption.verified}\n🐶 Private : ${anu.caption.private}\n🐶 Bio : ${anu.caption.biography}\n🐶 Bio Url : ${anu.caption.bio_url}`, m)
+                    XeonBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', ` Full Name : ${anu.caption.full_name}\n User Name : ${anu.caption.user_name}\n ID ${anu.caption.user_id}\n Following : ${anu.caption.followers}\n Followers : ${anu.caption.following}\n Bussines : ${anu.caption.bussines}\n🐶 Professional : ${anu.caption.profesional}\n Verified : ${anu.caption.verified}\n Private : ${anu.caption.private}\n Bio : ${anu.caption.biography}\n Bio Url : ${anu.caption.bio_url}`, m)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'npm') {
                     if (!id) return reply(`No Query username, Example : ${prefix + command} npm scrape-primbon`)
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
                     if (anu.status == false) return reply(anu.result.message)
-                    reply(`🐶 Name : ${anu.name}\n🐶 Version : ${Object.keys(anu.versions)}\n🐶 Created : ${tanggal(anu.time.created)}\n🐶 Modified : ${tanggal(anu.time.modified)}\n🐶 Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n🐶 Description : ${anu.description}\n🐶 Homepage : ${anu.homepage}\n🐶 Keywords : ${anu.keywords}\n🐶 Author : ${anu.author.name}\n🐶 License : ${anu.license}\n🐶 Readme : ${anu.readme}`)
+                    reply(` Name : ${anu.name}\n Version : ${Object.keys(anu.versions)}\n Created : ${tanggal(anu.time.created)}\n Modified : ${tanggal(anu.time.modified)}\n Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n Description : ${anu.description}\n Homepage : ${anu.homepage}\n Keywords : ${anu.keywords}\n Author : ${anu.author.name}\n License : ${anu.license}\n Readme : ${anu.readme}`)
 		    db.data.users[m.sender].limit -= 1
                 } else {
                     reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
@@ -3291,7 +3291,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  Cheems Bot With You Forever 
-││✑  🐶🖐️!!
+││✑  🖐️!!
 │└───────────────┈ ⳹
 │ 「 BOT INFO 」
 │✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
@@ -3307,17 +3307,17 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
    └───────────────┈ ⳹`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
-                                    url: `${myweb}`
+                                    displayText: 'OTOSAKA',
+                                    url: ` `
                                 }
                             }, {
                             	urlButton: {
-                                displayText: 'Script🔖',
-                                    url: `${sc}`
+                                displayText: 'Love You',
+                                    url: ``
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
+                                    displayText: '🐦الاوامر🐦',
                                     id: `${prefix}allmenu`
                                 }
                                 }, {
@@ -3328,7 +3328,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }, {
                                 quickReplyButton: {
                                     displayText: '👤Owner👤',
-                                    id: `${prefix}owner`
+                                    id: `otosaka/artur`
                                 }
                             }]
                         }
